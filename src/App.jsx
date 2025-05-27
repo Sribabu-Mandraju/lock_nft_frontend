@@ -9,7 +9,7 @@ import OperatingSystem from "./pages/OperatingSystem";
 import Staking from "./pages/Stacking";
   // import NotFound from "./pages/NotFound";
 import Overview from "./pages/Overview";
-
+import ConnectWallet from "./components/ConnectButton";
 
 const App = () => (
   <>
@@ -20,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Overview />} />
+          <Route path="/connect" element={<ConnectWallet />} />
           <Route path="/pools" element={<Pools />} />
           <Route path="/rwa" element={<RealWorldAssets />} />
           <Route path="/staking" element={<Staking />} />
