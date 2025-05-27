@@ -9,10 +9,8 @@ import BuySection from "../components/BuySection";
 const Overview = () => {
   return (
     <div className="min-h-screen bg-black text-white font-montserrat">
-      <Header />
 
       <div className="flex">
-        <Sidebar />
 
         <main className="flex-1 p-8">
           <BuySection />
@@ -32,7 +30,7 @@ const Overview = () => {
               {" "}
               <MetricCard title="MARKET CAP" value="$0" />
             </div>
-            <div className="col-span-3">
+            <div className="md:col-span-3">
               {" "}
               <MetricCard title="STABLZ STAKED" value="0" />
             </div>

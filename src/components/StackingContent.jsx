@@ -4,7 +4,7 @@ const StakingContent = () => {
   return (
     <div className="p-[30px_50px_50px]">
       {/* Staking Banner */}
-  <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient border border-purple-700/50 rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
+  <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient  rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
   <h1 className="text-white text-[13px] font-medium">
     Earn USDT by staking $OS
   </h1>
@@ -39,21 +39,28 @@ const StakingContent = () => {
       </div>
 
       {/* Loading State */}
-      <div className="flex items-center justify-center py-20">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-gray-700 border-t-white rounded-full animate-spin"></div>
-        </div>
-      </div>
+     <div className="relative w-16 h-16">
+  <div className="absolute inset-0 animate-spin">
+    <img src="spinner.png" alt="Outer Spinner" className="w-full h-full" />
+  </div>
+  <div className="absolute inset-2 animate-spin-reverse">
+    <img src="spinner.png" alt="Inner Spinner" className="w-full h-full" />
+  </div>
+   <div className="absolute inset-4 animate-spin">
+    <img src="spinner.png" alt="Inner Spinner" className="w-full h-full" />
+  </div>
+</div>
+
 
       {/* Error Message */}
-      <div className="fixed bottom-6 right-6 bg-gray-900 border border-red-500 rounded-lg p-4 flex items-center">
+      {/* <div className="fixed bottom-6 right-6 bg-gray-900 border border-red-500 rounded-lg p-4 flex items-center">
         <div className="w-4 h-4 bg-red-500 rounded-full flex items-center justify-center mr-3">
           <div className="text-white text-xs font-bold">!</div>
         </div>
         <div className="text-white text-sm">
           UNABLE TO FETCH STAKING INFORMATION
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

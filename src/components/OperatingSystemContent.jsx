@@ -4,15 +4,14 @@ const OperatingSystemContent = () => {
   return (
     <div className="p-8">
       {/* Operating System Banner */}
-      <div className="bg-gradient-to-r from-blue-900/40 to-blue-800/40 border border-blue-700/50 rounded-lg p-8 mb-8">
-        <h1 className="text-white text-xl font-medium mb-2">
-          Need some $OS? Stake $STABLZ and receive $OS at a 1:1 ratio
-        </h1>
-        <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition-colors">
-          STAKE
-        </button>
-      </div>
-
+     <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
+  <h1 className="text-white text-[13px] font-medium">
+Need some $OS? Stake $STABLZ and receive $OS at a 1:1 ratio
+  </h1>
+  <button className="p-[10px-20px] text-[12px] hover:bg-purple-700 text-white rounded font-medium transition-colors">
+    Stake
+  </button>
+</div>
       {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">

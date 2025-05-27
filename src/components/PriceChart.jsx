@@ -3,13 +3,13 @@ import React from 'react';
 const PriceChart = () => {
   return (
     <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6 col-span-2">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex  flex-col md:flex-row items-center justify-between mb-6">
         <div>
           <div className="text-white text-4xl font-bold mb-2">$0.0000</div>
           <div className="text-gray-400 text-sm">MAY 27, 2025 4:41 PM</div>
         </div>
-        <div className="flex items-center gap-6">
-          <div className="text-right">
+        <div className="flex items-center gap-6 mt-2">
+          <div className="md:text-right">
             <div className="text-gray-400 text-sm mb-1">STABLZ/USD</div>
             <div className="text-white font-bold">PRICE</div>
           </div>
