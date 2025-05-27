@@ -73,14 +73,14 @@ const OperatingSystemContent = () => {
       </div>
 
       {/* Error Message */}
-      <div className="fixed bottom-6 right-6 bg-gray-900 border border-red-500 rounded-lg p-4 flex items-center">
+      {/* <div className="fixed bottom-6 right-6 bg-gray-900 border border-red-500 rounded-lg p-4 flex items-center">
         <div className="w-4 h-4 bg-red-500 rounded-full flex items-center justify-center mr-3">
           <div className="text-white text-xs font-bold">!</div>
         </div>
         <div className="text-white text-sm">
           UNABLE TO FETCH OPERATING SYSTEM STAKING INFORMATION
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

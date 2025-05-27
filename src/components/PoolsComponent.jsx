@@ -52,19 +52,20 @@ const PoolsContent = () => {
       {/* Pools Table */}
       <div className="bg-black rounded-lg overflow-hidden">
         {/* Table Header */}
-        <div className="grid grid-cols-6 gap-2 p-2 sm:p-4 text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">
+        <div className="grid grid-cols-4 xl:grid-cols-8 gap-2 p-2 sm:p-4 text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">
           <div className="col-span-2"></div>
           <div className="col-span-1">vAPY</div>
           <div className="col-span-1">TVL</div>
           <div className="hidden md:block col-span-1">Capital</div>
           <div className="hidden md:block col-span-1">Rewards</div>
+          <div className="hidden xl:block col-span-2"></div> {/* Placeholder for buttons on xl */}
         </div>
 
         {/* Table Rows */}
         {poolsData.map((pool) => (
           <div
             key={pool.id}
-            className="bg-[#090809] my-2 grid grid-cols-6 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
+            className="bg-[#090809] my-2 grid grid-cols-4 xl:grid-cols-8 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
           >
             {/* Pool Name & Icon */}
             <div className="col-span-2 flex items-center gap-[20px] md:gap-10">
@@ -72,7 +73,7 @@ const PoolsContent = () => {
                 <div className="absolute w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-gray-700 bg-green-500 top-0 left-0 z-10"></div>
                 <div className="absolute w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-gray-700 bg-yellow-500 top-0 left-2 sm:left-3 z-20"></div>
                 <div className="absolute w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-gray-700 bg-blue-500 top-0 left-4 sm:left-6 z-30"></div>
-              </div>
+            </div>
               <span className="text-white text-sm sm:text-base font-medium">{pool.name}</span>
             </div>
 
@@ -86,18 +87,18 @@ const PoolsContent = () => {
               <span className="text-white text-sm sm:text-base">{pool.tvl}</span>
             </div>
 
-            {/* Capital (hidden on small) */}
+            {/* Capital (visible on all screens) */}
             <div className="col-span-1 flex items-center">
-              <span className="text-white text-sm sm:text-base hidden md:block">{pool.capital}</span>
+              <span className="text-white text-sm sm:text-base">{pool.capital}</span>
             </div>
 
-            {/* Rewards (hidden on small, now fixed to stay in the same line) */}
+            {/* Rewards (visible on all screens) */}
             <div className="col-span-1 flex items-center">
-              <span className="text-white text-sm sm:text-base hidden md:block">{pool.rewards}</span>
+              <span className="text-white text-sm sm:text-base">{pool.rewards}</span>
             </div>
 
-            {/* Buttons (full width, centered) */}
-            <div className="col-span-6 flex flex-wrap justify-center items-center gap-2 mt-2">
+            {/* Buttons (full width on smaller screens, same line on xl) */}
+            <div className="col-span-4 xl:col-span-2 flex flex-wrap justify-center xl:justify-end items-center gap-2 mt-2 xl:mt-0">
               <div className="flex rounded-full py-[5px] bg-[#111011]">
                 <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
                   DEPOSIT
