@@ -52,8 +52,8 @@ const PoolsContent = () => {
       {/* Pools Table */}
       <div className="bg-black rounded-lg overflow-hidden">
         {/* Table Header */}
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-2 p-2 sm:p-4 text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">
-          <div className="col-span-1"></div>
+        <div className="grid grid-cols-6 gap-2 p-2 sm:p-4 text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">
+          <div className="col-span-2"></div>
           <div className="col-span-1">vAPY</div>
           <div className="col-span-1">TVL</div>
           <div className="hidden md:block col-span-1">Capital</div>
@@ -64,10 +64,10 @@ const PoolsContent = () => {
         {poolsData.map((pool) => (
           <div
             key={pool.id}
-            className="bg-[#090809] my-2 grid grid-cols-3 md:grid-cols-5 gap-2  p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
+            className="bg-[#090809] my-2 grid grid-cols-6 gap-2 p-2 items-center hover:bg-gray-800/30 transition-colors md:p-[20px_30px] rounded-lg"
           >
             {/* Pool Name & Icon */}
-            <div className="col-span-1 flex items-center gap-[20px] md:gap-10">
+            <div className="col-span-2 flex items-center gap-[20px] md:gap-10">
               <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                 <div className="absolute w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-gray-700 bg-green-500 top-0 left-0 z-10"></div>
                 <div className="absolute w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-gray-700 bg-yellow-500 top-0 left-2 sm:left-3 z-20"></div>
@@ -87,24 +87,24 @@ const PoolsContent = () => {
             </div>
 
             {/* Capital (hidden on small) */}
-            <div className="hidden md:flex items-center col-span-1">
-              <span className="text-white text-sm sm:text-base">{pool.capital}</span>
+            <div className="col-span-1 flex items-center">
+              <span className="text-white text-sm sm:text-base hidden md:block">{pool.capital}</span>
             </div>
 
-            {/* Rewards (hidden on small) */}
-            <div className="hidden md:flex items-center col-span-1">
-              <span className="text-white text-sm sm:text-base">{pool.rewards}</span>
+            {/* Rewards (hidden on small, now fixed to stay in the same line) */}
+            <div className="col-span-1 flex items-center">
+              <span className="text-white text-sm sm:text-base hidden md:block">{pool.rewards}</span>
             </div>
 
             {/* Buttons (full width, centered) */}
-            <div className="col-span-4 md:col-span-5 flex flex-wrap justify-center items-center gap-2 mt-2">
-             <div className="flex rounded-full py-[5px] bg-[#111011] ">
-              <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
-                DEPOSIT
-              </button>
-              <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
-                WITHDRAW
-              </button>
+            <div className="col-span-6 flex flex-wrap justify-center items-center gap-2 mt-2">
+              <div className="flex rounded-full py-[5px] bg-[#111011]">
+                <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
+                  DEPOSIT
+                </button>
+                <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
+                  WITHDRAW
+                </button>
               </div>
               <button className="px-4 py-1 text-xs font-medium text-gray-400 rounded hover:border-gray-500 hover:text-white transition-colors">
                 CLAIM

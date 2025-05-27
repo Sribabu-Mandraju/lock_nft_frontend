@@ -79,7 +79,7 @@ const Header = ({toggleSidebar}) => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
           <div
-            className={`bg-gradient-to-br from-gray-900 to-black text-white p-8 rounded-xl max-w-lg w-full max-h-[90vh] flex flex-col shadow-2xl ${
+            className={`bg-gradient-to-br from-gray-900 to-black text-white p-[20px] rounded-sm max-w-lg w-full max-h-[90vh] flex flex-col shadow-2xl ${
               hasAgreed ? "" : "border border-gray-700"
             }`}
           >

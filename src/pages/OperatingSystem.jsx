@@ -5,9 +5,8 @@ import OperatingSystemContent from '../components/OperatingSystemContent';
 
 const OperatingSystem = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-montserrat">
-    
-      
+    <div className="relative min-h-screen bg-black text-white font-montserrat"> 
+   
       <div className="flex">
         <main className="flex-1">
           <OperatingSystemContent />

@@ -6,7 +6,7 @@ import RealWorldAssetsContent from '../components/RealWorldAssetsContent';
 const RealWorldAssets = () => {
   return (
     <div className="min-h-screen bg-black text-white font-montserrat">
-      
+       
       <div className="flex">
         <main className="flex-1">
           <RealWorldAssetsContent />
