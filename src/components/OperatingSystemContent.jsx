@@ -1,28 +1,26 @@
-import React from 'react';
+import React from "react";
 
 const OperatingSystemContent = () => {
   return (
     <div className="p-8">
       {/* Operating System Banner */}
-     <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
-  <h1 className="text-white text-[13px] font-medium">
-Need some $OS? Stake $STABLZ and receive $OS at a 1:1 ratio
-  </h1>
-  <button className="p-[10px-20px] text-[12px] hover:bg-purple-700 text-white rounded font-medium transition-colors">
-    Stake
-  </button>
-</div>
+      <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
+        <h1 className="text-white text-[13px] font-medium">
+          Need some $OS? Stake $STABLZ and receive $OS at a 1:1 ratio
+        </h1>
+        <button className="p-[10px-20px] text-[12px] hover:bg-purple-700 text-white rounded font-medium transition-colors">
+          Stake
+        </button>
+      </div>
       {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">
           <h3 className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-3">
             TVL ($OS)
           </h3>
-          <div className="text-white text-2xl font-bold">
-            0.00
-          </div>
+          <div className="text-white text-2xl font-bold">0.00</div>
         </div>
-        
+
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">
           <div className="flex items-center gap-2 mb-3">
             <h3 className="text-gray-400 text-sm font-medium uppercase tracking-wider">
@@ -32,34 +30,45 @@ Need some $OS? Stake $STABLZ and receive $OS at a 1:1 ratio
               ?
             </div>
           </div>
-          <div className="text-white text-2xl font-bold">
-            N/A
-          </div>
+          <div className="text-white text-2xl font-bold">N/A</div>
         </div>
-        
+
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">
           <h3 className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-3">
             TOTAL REWARDS
           </h3>
-          <div className="text-white text-2xl font-bold">
-            $0.00
-          </div>
+          <div className="text-white text-2xl font-bold">$0.00</div>
         </div>
-        
+
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">
           <h3 className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-3">
             TOTAL CLAIMED
           </h3>
-          <div className="text-white text-2xl font-bold">
-            $0.00
-          </div>
+          <div className="text-white text-2xl font-bold">$0.00</div>
         </div>
       </div>
 
-      {/* Loading State */}
-      <div className="flex items-center justify-center py-20">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-gray-700 border-t-white rounded-full animate-spin"></div>
+      <div className="relative w-16 h-16 mx-auto">
+        <div className="absolute inset-0 animate-spin">
+          <img
+            src="spinner.png"
+            alt="Outer Spinner"
+            className="w-full h-full"
+          />
+        </div>
+        <div className="absolute inset-2 animate-spin-reverse">
+          <img
+            src="spinner.png"
+            alt="Inner Spinner"
+            className="w-full h-full"
+          />
+        </div>
+        <div className="absolute inset-4 animate-spin">
+          <img
+            src="spinner.png"
+            alt="Inner Spinner"
+            className="w-full h-full"
+          />
         </div>
       </div>
 

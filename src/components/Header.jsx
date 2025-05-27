@@ -2,8 +2,9 @@
 import React, { useState, useRef } from "react";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { injected, walletConnect, coinbaseWallet } from "wagmi/connectors";
+import { IoMdMenu } from "react-icons/io";
 
-const Header = () => {
+const Header = ({toggleSidebar}) => {
   const { address, isConnected } = useAccount();
   const { connect } = useConnect();
   const { disconnect } = useDisconnect();
@@ -45,9 +46,16 @@ const Header = () => {
     <div>
       {/* Header Component */}
       <header className="flex items-center justify-between p-6 bg-black font-montserrat">
-        <div className="flex items-center px-[40px]">
+        <div className="flex items-center md:px-[40px]">
           <div className="text-white text-xl font-bold tracking-wider">
-            <img src="logo.png" alt="" className="h-[22px] w-[87px]" />
+            <img src="logo.png" alt="" className="h-[22px] w-[87px] hidden" />
+             <button
+      className="md:hidden text-white mr-2"
+      onClick={toggleSidebar}
+    >
+     <span className="text-2xl"><IoMdMenu /></span> 
+
+    </button>
           </div>
         </div>
         {isConnected ? (

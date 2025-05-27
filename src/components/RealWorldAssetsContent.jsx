@@ -29,11 +29,17 @@ const RealWorldAssetsContent = () => {
       </div>
 
       {/* Loading State */}
-      <div className="flex items-center justify-center py-20">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-gray-700 border-t-white rounded-full animate-spin"></div>
-        </div>
-      </div>
+     <div className="relative w-16 h-16 mx-auto">
+  <div className="absolute inset-0 animate-spin">
+    <img src="spinner.png" alt="Outer Spinner" className="w-full h-full" />
+  </div>
+  <div className="absolute inset-2 animate-spin-reverse">
+    <img src="spinner.png" alt="Inner Spinner" className="w-full h-full" />
+  </div>
+   <div className="absolute inset-4 animate-spin">
+    <img src="spinner.png" alt="Inner Spinner" className="w-full h-full" />
+  </div>
+</div>
     </div>
   );
 };

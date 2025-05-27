@@ -2,7 +2,7 @@ import React from "react";
 
 const StakingContent = () => {
   return (
-    <div className="p-[30px_50px_50px]">
+    <div className="min-h-screen p-[30px_50px_50px]">
       {/* Staking Banner */}
   <div className="bg-gradient-animation bg-[length:400%_400%] animate-gradient  rounded-lg p-[15px_30px] mb-8 flex items-center justify-between">
   <h1 className="text-white text-[13px] font-medium">
@@ -12,8 +12,6 @@ const StakingContent = () => {
     DEPOSIT
   </button>
 </div>
-
-
       {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="bg-gray-900/40 border border-gray-800 rounded-lg p-6">
@@ -39,7 +37,7 @@ const StakingContent = () => {
       </div>
 
       {/* Loading State */}
-     <div className="relative w-16 h-16">
+     <div className="relative w-16 h-16 mx-auto">
   <div className="absolute inset-0 animate-spin">
     <img src="spinner.png" alt="Outer Spinner" className="w-full h-full" />
   </div>

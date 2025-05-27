@@ -60,15 +60,15 @@ const PoolsContent = () => {
           <div></div>
           <div>vAPY</div>
           <div>TVL</div>
-          <div>CAPITAL</div>
-          <div>REWARDS</div>
-          <div></div>
+          <div className='hidden sm:block'>CAPITAL</div>
+          <div  className='hidden sm:block'>REWARDS</div>
         </div>
 
         {/* Table Rows */}
         {poolsData.map((pool) => (
-          <div key={pool.id} className="grid grid-cols-6 gap-4 p-6 border-b border-gray-800 last:border-b-0 hover:bg-gray-800/30 transition-colors">
+          <div key={pool.id} className="grid grid-cols-5 gap-4 p-6 border-b border-gray-800 last:border-b-0 hover:bg-gray-800/30 transition-colors">
             {/* Pool Name & Icon */}
+            
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
                 {pool.icon}
@@ -97,7 +97,7 @@ const PoolsContent = () => {
             </div>
 
             {/* Actions */}
-            <div className="flex items-center gap-2">
+           <div className="flex items-center gap-2 w-full ">
               <button className="px-4 py-1 text-xs font-medium text-gray-400 border border-gray-600 rounded hover:border-gray-500 hover:text-white transition-colors">
                 DEPOSIT
               </button>
@@ -110,6 +110,8 @@ const PoolsContent = () => {
             </div>
           </div>
         ))}
+        
+         
       </div>
     </div>
   );
